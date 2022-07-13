@@ -6,7 +6,7 @@ This is a Bash script for Linux that will search the users home directory for fi
 
 ## Usage:
 
-*Note: You might need to run `chmod +x ./FindHome.sh` to be able to execute the script.*
+*Note: You might need to run `chmod +x FindHome.sh` to be able to execute the script.*
 
 - To use the script, just execute it and type into the terminal the search query you would like to search for. 
 - To search for hidden files/folders add `h` as a parameter when you run the script.

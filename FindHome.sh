@@ -15,8 +15,8 @@ fi
 printf "============\nSearching...\n============\n"
 
 if [ "$1" = 'h' ]
-then find /home/$(whoami)/ 2>/dev/null | grep $FINDHOMESearchString > /tmp/findhomeresult
-else find /home/$(whoami)/ -not -path '*/.*' 2>/dev/null | grep $FINDHOMESearchString > /tmp/findhomeresult
+then find $(eval echo ~$USER)/ 2>/dev/null | grep $FINDHOMESearchString > /tmp/findhomeresult
+else find $(eval echo ~$USER)/ -not -path '*/.*' 2>/dev/null | grep $FINDHOMESearchString > /tmp/findhomeresult
 fi
 
 whiptail --scrolltext --title "Find Home = Results" --msgbox "Top 1200 Results for [$(echo $FINDHOMESearchString)]:\n\n$(cat /tmp/findhomeresult | head -n1200)" --ok-button "Close and Exit" 25 130
